@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Asha Family Restaurant</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .page-header {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .story-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .story-img {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .story-img img {
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .story-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .value-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .value-icon {
+            font-size: 40px;
+            color: var(--color-primary);
+            margin-bottom: 16px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Asha Family Restaurant</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="reservation.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Book a
+                    Table</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>A journey of flavors and tradition</p>
+        </div>
+    </div>
+
+    <!-- Story Section -->
+    <section class="section-padding">
+        <div class="container story-section">
+            <div class="story-img">
+                <!-- Using restaurant background as placeholder for interior/story image -->
+                <img src="images/Resturant background.jpg" alt="Restaurant Interior">
+            </div>
+            <div class="story-content">
+                <h2 style="color: var(--color-primary); font-family: var(--font-accent);">Est. 2026</h2>
+                <h3>Celebrating Authentic Indian Cuisine</h3>
+                <p class="mb-lg">
+                    Asha Family Restaurant was founded with a simple mission: to bring the authentic, soul-satisfying
+                    taste of homemade Indian food to your table.
+                    Named after "Asha," meaning hope and desire, we aspire to fulfill your desire for genuine flavors
+                    and warm hospitality.
+                </p>
+                <p>
+                    Our chefs carefully select the finest spices and freshest ingredients to create dishes that pay
+                    homage to India's rich culinary heritage.
+                    From the tandoors of the North to the spices of the South, our menu is a curated journey through the
+                    diverse landscape of Indian cuisine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section-padding" style="background-color: var(--color-cream);">
+        <div class="container">
+            <div class="text-center mb-lg">
+                <h2>Why Choose Us</h2>
+                <p>What makes our dining experience special</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <span class="value-icon">🍲</span>
+                    <h4>Authentic Recipes</h4>
+                    <p>Traditional recipes passed down through generations, prepared without compromise.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">🌿</span>
+                    <h4>Fresh Ingredients</h4>
+                    <p>We source fresh, high-quality local produce and authentic spices daily.</p>
+                </div>
+                <div class="value-card">
+                    <span class="value-icon">👨‍👩‍👧‍👦</span>
+                    <h4>Family Atmosphere</h4>
+                    <p>A warm, welcoming environment perfect for family gatherings and celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Asha Family Restaurant</h3>
+                    <p>Authentic Indian Cuisine for the whole family.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>123 Restaurant Street, City, State</p>
+                    <p>Phone: +91 9226347261</p>
+                    <p>Email: samirgunjite24@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asha Family Restaurant. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

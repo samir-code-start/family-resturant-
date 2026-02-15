@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Asha Family Restaurant</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@400;600&family=Playfair+Display:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-header-section {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 40px 0;
+            position: sticky;
+            top: 80px;
+            background: var(--color-cream);
+            padding: 16px 0;
+            z-index: 90;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-btn {
+            background: transparent;
+            border: 1px solid var(--color-primary);
+            color: var(--color-charcoal);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: var(--font-subheading);
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--color-primary);
+            color: white;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 32px;
+            padding-bottom: 60px;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .menu-img-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .menu-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-item:hover .menu-img-container img {
+            transform: scale(1.1);
+        }
+
+        .type-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: white;
+            border-radius: 50%;
+            padding: 4px;
+            font-size: 12px;
+        }
+
+        .menu-details {
+            padding: 20px;
+        }
+
+        .menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .menu-header h4 {
+            font-size: 18px;
+            margin: 0;
+            color: var(--color-secondary);
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .btn-add {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--color-primary);
+            background: transparent;
+            color: var(--color-primary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-add:hover {
+            background: var(--color-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Asha Family Restaurant</a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html" class="active">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="reservation.html" class="btn btn-primary" style="color: white; padding: 8px 16px;">Book a
+                    Table</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="menu-header-section">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Authentic flavors prepared with love</p>
+        </div>
+    </div>
+
+    <!-- Category Nav -->
+    <div class="category-nav">
+        <button class="category-btn active" data-category="All">All</button>
+        <button class="category-btn" data-category="Starters">Starters</button>
+        <button class="category-btn" data-category="Main Course">Main Course</button>
+        <button class="category-btn" data-category="Rice & Biryani">Rice & Biryani</button>
+        <button class="category-btn" data-category="Breads">Breads</button>
+        <button class="category-btn" data-category="Thali">Thali</button>
+        <button class="category-btn" data-category="Desserts">Desserts</button>
+        <button class="category-btn" data-category="Beverages">Beverages</button>
+    </div>
+
+    <!-- Menu Grid -->
+    <div class="container">
+        <div class="menu-grid" id="menu-container">
+            <!-- Items will be populated by JS -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Asha Family Restaurant</h3>
+                    <p>Authentic Indian Cuisine for the whole family.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>123 Restaurant Street, City, State</p>
+                    <p>Phone: +91 9226347261</p>
+                    <p>Email: samirgunjite24@gmail.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Asha Family Restaurant. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

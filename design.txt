@@ -1,0 +1,506 @@
+RESTAURANT WEBSITE DESIGN SPECIFICATIONS
+═══════════════════════════════════════════════════════════════
+
+PROJECT: Indian Restaurant Website
+DATE: February 15, 2026
+VERSION: 1.0
+
+
+COLOR PALETTE
+───────────────────────────────────────────────────────────────
+
+Primary Colors:
+- Saffron Orange: #FF9933 (rgb(255, 153, 51))
+- Deep Burgundy: #8B1538 (rgb(139, 21, 56))
+- Royal Gold: #D4AF37 (rgb(212, 175, 55))
+
+Secondary Colors:
+- Warm Cream: #FFF8DC (rgb(255, 248, 220))
+- Terracotta: #E07040 (rgb(224, 112, 64))
+- Mint Green: #98D8C8 (rgb(152, 216, 200))
+
+Neutral Colors:
+- Charcoal: #2C2C2C (rgb(44, 44, 44))
+- Light Gray: #F5F5F5 (rgb(245, 245, 245))
+- White: #FFFFFF (rgb(255, 255, 255))
+
+Accent Colors:
+- Spice Red: #DC143C (rgb(220, 20, 60))
+- Turmeric Yellow: #FFDB58 (rgb(255, 219, 88))
+
+
+TYPOGRAPHY
+───────────────────────────────────────────────────────────────
+
+Font Stack:
+
+Headings:
+- Primary: 'Playfair Display', Georgia, serif
+- Font Weight: 700 (Bold)
+- Font Style: Elegant, traditional
+- Use Case: Main headings, page titles
+
+Subheadings:
+- Primary: 'Poppins', 'Segoe UI', sans-serif
+- Font Weight: 600 (Semi-bold)
+- Use Case: Section titles, category names
+
+Body Text:
+- Primary: 'Open Sans', Arial, sans-serif
+- Font Weight: 400 (Regular)
+- Line Height: 1.6
+- Use Case: Descriptions, paragraphs
+
+Menu Items:
+- Primary: 'Roboto', sans-serif
+- Font Weight: 500 (Medium)
+- Use Case: Menu item names and prices
+
+Accent Text:
+- Primary: 'Dancing Script', cursive
+- Font Weight: 400
+- Use Case: Special offers, taglines
+
+Font Sizes (Desktop):
+- H1: 48px-56px
+- H2: 36px-42px
+- H3: 28px-32px
+- H4: 22px-24px
+- Body: 16px-18px
+- Small: 14px
+- Caption: 12px
+
+Font Sizes (Mobile):
+- H1: 32px-36px
+- H2: 26px-28px
+- H3: 22px-24px
+- H4: 18px-20px
+- Body: 15px-16px
+- Small: 13px
+- Caption: 11px
+
+
+LAYOUT & GRID SYSTEM
+───────────────────────────────────────────────────────────────
+
+Grid Structure:
+- Desktop: 12-column grid
+- Tablet: 8-column grid
+- Mobile: 4-column grid
+
+Breakpoints:
+- Mobile: 320px - 767px
+- Tablet: 768px - 1023px
+- Desktop: 1024px - 1439px
+- Large Desktop: 1440px+
+
+Maximum Content Width:
+- Container: 1280px
+- Content: 1140px (with padding)
+
+Spacing System (8px base):
+- xs: 8px
+- sm: 16px
+- md: 24px
+- lg: 32px
+- xl: 48px
+- 2xl: 64px
+- 3xl: 96px
+
+Padding/Margins:
+- Section padding: 80px (desktop), 48px (mobile)
+- Container padding: 32px (desktop), 20px (mobile)
+- Card padding: 24px
+- Button padding: 12px 32px
+
+
+PAGE LAYOUTS
+───────────────────────────────────────────────────────────────
+
+HOME PAGE LAYOUT:
+
+1. Header/Navigation (Fixed)
+   - Height: 80px
+   - Background: White with subtle shadow
+   - Logo: Left aligned
+   - Menu: Right aligned
+   - Mobile: Hamburger menu
+
+2. Hero Section
+   - Height: 600px (desktop), 400px (mobile)
+   - Background: Full-width image with overlay
+   - Heading: Centered
+   - CTA buttons: Centered below heading
+   - Scroll indicator: Bottom
+
+3. Welcome Section
+   - Two-column layout (desktop)
+   - Image: Left (40%)
+   - Text: Right (60%)
+   - Single column (mobile)
+
+4. Featured Dishes
+   - Three-column grid (desktop)
+   - Two-column grid (tablet)
+   - Single column (mobile)
+   - Card-based design
+
+5. Why Choose Us
+   - Four-column grid (desktop)
+   - Two-column grid (tablet/mobile)
+   - Icon + Text layout
+
+6. Testimonials
+   - Carousel layout
+   - Three visible (desktop)
+   - One visible (mobile)
+   - Auto-play with controls
+
+7. Reservation Call-to-Action
+   - Full-width banner
+   - Centered content
+   - Background image with overlay
+
+8. Footer
+   - Four-column layout (desktop)
+   - Single column stacked (mobile)
+   - Contact info, hours, social media
+
+
+MENU PAGE LAYOUT:
+
+1. Page Header
+   - Full-width banner
+   - Category navigation tabs
+
+2. Category Sections
+   - Two-column grid for menu items
+   - Item name + price on same line
+   - Description below
+   - Image thumbnail (optional)
+
+3. Sidebar (Desktop)
+   - Dietary filters
+   - Spice level indicator
+   - Search functionality
+
+
+COMPONENT SPECIFICATIONS
+───────────────────────────────────────────────────────────────
+
+BUTTONS:
+
+Primary Button:
+- Background: #FF9933
+- Text Color: #FFFFFF
+- Padding: 12px 32px
+- Border Radius: 4px
+- Font Weight: 600
+- Hover: #E68A2E (darker shade)
+- Transition: 0.3s ease
+
+Secondary Button:
+- Background: Transparent
+- Border: 2px solid #8B1538
+- Text Color: #8B1538
+- Padding: 10px 30px
+- Border Radius: 4px
+- Hover: Background #8B1538, Text white
+
+Text Button:
+- Background: None
+- Text Color: #FF9933
+- Underline on hover
+- Font Weight: 500
+
+
+CARDS:
+
+Menu Item Card:
+- Background: White
+- Border: 1px solid #E5E5E5
+- Border Radius: 8px
+- Padding: 24px
+- Shadow: 0 2px 8px rgba(0,0,0,0.08)
+- Hover: Shadow increases
+
+Testimonial Card:
+- Background: #FFF8DC
+- Border: None
+- Border Radius: 12px
+- Padding: 32px
+- Quote icon: Top left
+
+
+NAVIGATION:
+
+Desktop Navigation:
+- Fixed position on scroll
+- Links: 16px font size
+- Spacing: 32px between items
+- Active state: Bottom border (3px #FF9933)
+- Hover: Color change to #FF9933
+
+Mobile Navigation:
+- Hamburger icon: Right side
+- Slide-in menu from right
+- Full-screen overlay
+- Close button: Top right
+
+
+FORMS:
+
+Input Fields:
+- Height: 48px
+- Border: 1px solid #CCCCCC
+- Border Radius: 4px
+- Padding: 12px 16px
+- Focus: Border color #FF9933
+- Font Size: 16px
+
+Text Area:
+- Min Height: 120px
+- Same styling as input fields
+
+Select Dropdown:
+- Same as input fields
+- Custom arrow icon
+
+Form Labels:
+- Font Weight: 500
+- Margin Bottom: 8px
+- Color: #2C2C2C
+
+
+IMAGES & MEDIA
+───────────────────────────────────────────────────────────────
+
+Image Specifications:
+
+Hero Images:
+- Dimensions: 1920x1080px
+- Format: JPG (optimized)
+- File Size: <300KB
+
+Food Photography:
+- Dimensions: 800x600px (minimum)
+- Aspect Ratio: 4:3
+- Format: JPG
+- File Size: <150KB
+
+Thumbnail Images:
+- Dimensions: 400x300px
+- Aspect Ratio: 4:3
+- Format: JPG/WebP
+- File Size: <50KB
+
+Logo:
+- Format: PNG (transparent) + SVG
+- Sizes: 180x60px (desktop), 140x50px (mobile)
+
+Image Optimization:
+- Lazy loading for below-fold images
+- Responsive images (srcset)
+- WebP format with JPG fallback
+- Compression quality: 80-85%
+
+
+ICONS & GRAPHICS
+───────────────────────────────────────────────────────────────
+
+Icon Style:
+- Line icons (2px stroke)
+- Size: 24px-32px
+- Color: #FF9933 or #8B1538
+- Consistent style throughout
+
+Icon Library:
+- Font Awesome (free) or
+- Feather Icons or
+- Custom SVG icons
+
+Decorative Elements:
+- Traditional Indian patterns
+- Spice illustrations
+- Geometric borders
+- Subtle texture overlays
+
+
+ANIMATIONS & INTERACTIONS
+───────────────────────────────────────────────────────────────
+
+Page Transitions:
+- Fade in: 0.5s ease
+- Slide up: 0.6s ease-out
+
+Hover Effects:
+- Scale: 1.05 (0.3s)
+- Shadow increase
+- Color change
+- Underline appear
+
+Scroll Animations:
+- Fade in on scroll
+- Slide in from sides
+- Parallax effect (hero section)
+
+Loading States:
+- Skeleton screens
+- Loading spinner
+- Progress indicators
+
+Micro-interactions:
+- Button press feedback
+- Form field focus
+- Menu item hover
+- Image hover zoom
+
+
+ACCESSIBILITY REQUIREMENTS
+───────────────────────────────────────────────────────────────
+
+Color Contrast:
+- Text on background: Minimum 4.5:1
+- Large text: Minimum 3:1
+- Interactive elements: 3:1
+
+Keyboard Navigation:
+- Tab order logical
+- Focus indicators visible
+- Skip to main content link
+- Escape key closes modals
+
+Screen Reader Support:
+- Alt text for all images
+- ARIA labels where needed
+- Semantic HTML structure
+- Form labels properly associated
+
+Text Readability:
+- Minimum font size: 14px
+- Line height: 1.5 minimum
+- Paragraph width: Max 75 characters
+- Clear heading hierarchy
+
+
+RESPONSIVE DESIGN RULES
+───────────────────────────────────────────────────────────────
+
+Mobile-First Approach:
+1. Design for mobile screens first
+2. Add complexity for larger screens
+3. Touch-friendly targets (44px minimum)
+
+Image Handling:
+- Serve appropriate sizes
+- Use picture element
+- Implement lazy loading
+
+Navigation:
+- Hamburger menu on mobile
+- Full menu on desktop
+- Touch-friendly tap areas
+
+Content Priority:
+- Most important content first
+- Progressive enhancement
+- Graceful degradation
+
+
+PERFORMANCE TARGETS
+───────────────────────────────────────────────────────────────
+
+Loading Speed:
+- First Contentful Paint: <1.5s
+- Largest Contentful Paint: <2.5s
+- Time to Interactive: <3.5s
+- Total page size: <2MB
+
+Optimization Techniques:
+- Minify CSS/JS
+- Compress images
+- Enable browser caching
+- Use CDN for static assets
+- Lazy load images
+- Defer non-critical JavaScript
+
+
+CROSS-BROWSER COMPATIBILITY
+───────────────────────────────────────────────────────────────
+
+Supported Browsers:
+- Chrome: Latest 2 versions
+- Firefox: Latest 2 versions
+- Safari: Latest 2 versions
+- Edge: Latest 2 versions
+- Mobile Safari: Latest 2 versions
+- Mobile Chrome: Latest 2 versions
+
+Testing Requirements:
+- Visual regression testing
+- Functionality testing
+- Performance testing
+- Accessibility testing
+
+
+DESIGN ASSETS CHECKLIST
+───────────────────────────────────────────────────────────────
+
+Required Assets:
+□ Logo (PNG, SVG)
+□ Favicon (multiple sizes)
+□ Hero images (3-5 options)
+□ Food photography (all menu items)
+□ Restaurant interior photos
+□ Restaurant exterior photo
+□ Team/chef photos
+□ Icon set
+□ Pattern/texture files
+□ Social media icons
+□ Placeholder images
+
+
+BRAND GUIDELINES
+───────────────────────────────────────────────────────────────
+
+Voice & Tone:
+- Warm and welcoming
+- Authentic and traditional
+- Professional yet friendly
+- Passionate about food
+- Culturally respectful
+
+Visual Style:
+- Modern with traditional elements
+- Clean and organized
+- Rich in imagery
+- Culturally authentic
+- Appetizing and inviting
+
+Content Style:
+- Clear and concise
+- Descriptive but not overwhelming
+- Use of Indian culinary terms
+- Focus on quality and freshness
+- Highlight authenticity
+
+
+NOTES & CONSIDERATIONS
+───────────────────────────────────────────────────────────────
+
+• All measurements in pixels (px) for consistency
+• Use CSS variables for colors and spacing
+• Maintain 8px spacing system throughout
+• Ensure all interactive elements have hover states
+• Test on real devices, not just browser emulators
+• Consider loading times on slower connections
+• Plan for future content additions
+• Keep design scalable and maintainable
+
+
+═══════════════════════════════════════════════════════════════
+Document Status: Final
+Approved By: [Name]
+Date: February 15, 2026
+Next Review: [Date]
+═══════════════════════════════════════════════════════════════
