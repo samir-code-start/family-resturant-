@@ -1,22 +1,26 @@
 :root {
     /* Colors */
-    --color-primary: #FF9933; /* Saffron Orange */
+    --color-primary: #FF9933;
+    /* Saffron Orange */
     --color-primary-dark: #E68A2E;
-    --color-secondary: #8B1538; /* Deep Burgundy */
-    --color-accent: #D4AF37; /* Royal Gold */
-    --color-cream: #FFF8DC; /* Warm Cream */
+    --color-secondary: #8B1538;
+    /* Deep Burgundy */
+    --color-accent: #D4AF37;
+    /* Royal Gold */
+    --color-cream: #FFF8DC;
+    /* Warm Cream */
     --color-terracotta: #E07040;
     --color-mint: #98D8C8;
     --color-charcoal: #2C2C2C;
     --color-gray-light: #F5F5F5;
     --color-white: #FFFFFF;
-    
+
     /* Typography */
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Open Sans', Arial, sans-serif;
     --font-subheading: 'Poppins', sans-serif;
     --font-accent: 'Dancing Script', cursive;
-    
+
     /* Spacing */
     --spacing-xs: 8px;
     --spacing-sm: 16px;
@@ -24,12 +28,12 @@
     --spacing-lg: 32px;
     --spacing-xl: 48px;
     --spacing-2xl: 64px;
-    
+
     /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-    --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-    --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
-    
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
@@ -42,6 +46,13 @@
     box-sizing: border-box;
 }
 
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--color-charcoal);
@@ -50,7 +61,12 @@ body {
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
     color: var(--color-secondary);
     line-height: 1.2;
@@ -83,7 +99,10 @@ img {
 
 /* Header */
 header {
-    background-color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.55);
+    /* 55% Transparent */
+    backdrop-filter: blur(5px);
+    /* Glassmorphism effect */
     box-shadow: var(--shadow-sm);
     position: fixed;
     top: 0;
@@ -112,17 +131,24 @@ header {
 .nav-links {
     display: flex;
     gap: var(--spacing-lg);
+    align-items: center;
+    /* Ensure items are vertically centered */
 }
 
 .nav-links a {
     font-family: var(--font-subheading);
-    font-weight: 500;
+    font-weight: 600;
+    /* Increased weight for better readability on transparency */
     font-size: 16px;
     color: var(--color-charcoal);
     position: relative;
+    display: flex;
+    /* For icon alignment */
+    align-items: center;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--color-primary);
 }
 
@@ -137,8 +163,19 @@ header {
     transition: var(--transition-normal);
 }
 
-.nav-links a:hover::after, .nav-links a.active::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
+}
+
+/* Mobile and Desktop Logo Visibility Defaults */
+.mobile-logo,
+.mobile-map-btn {
+    display: none;
+}
+
+.desktop-logo {
+    display: block;
 }
 
 .mobile-menu-btn {
@@ -150,11 +187,21 @@ header {
     color: var(--color-secondary);
 }
 
+.mobile-map-btn {
+    color: var(--color-primary);
+    display: none;
+    /* Hidden on desktop */
+    align-items: center;
+    justify-content: center;
+}
+
 /* Hero Section */
 .hero {
-    margin-top: 80px;
+    /* Removed margin-top to allow overlay */
+    padding-top: 80px;
+    /* Compensate for header height */
     height: 600px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/Resturant background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/Resturant background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -165,14 +212,16 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 4rem; /* 64px */
+    font-size: 4rem;
+    /* 64px */
     color: var(--color-white);
     margin-bottom: var(--spacing-md);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
     margin-bottom: var(--spacing-lg);
     font-family: var(--font-subheading);
     max-width: 600px;
@@ -233,18 +282,114 @@ footer {
     font-size: 20px;
 }
 
-.footer-col p, .footer-col a {
-    color: rgba(255,255,255,0.8);
+.footer-col p,
+.footer-col a {
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: var(--spacing-xs);
     display: block;
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: var(--spacing-lg);
     text-align: center;
     font-size: 14px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Welcome Section */
+.welcome-heading {
+    color: var(--color-primary);
+    font-family: var(--font-accent);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.welcome-text {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--color-charcoal);
+    font-size: 1.1rem;
+}
+
+/* Featured Dishes */
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.dish-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.dish-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.dish-content {
+    padding: var(--spacing-md);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-title {
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+}
+
+.dish-description {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+.dish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-gray-light);
+}
+
+.dish-price {
+    font-weight: 700;
+    color: var(--color-terracotta);
+    font-size: 1.1rem;
+}
+
+.dish-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dish-link:hover {
+    color: var(--color-primary-dark);
 }
 
 /* Utilities */
@@ -262,31 +407,149 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    :root {
+        --spacing-2xl: 48px;
+        --spacing-xl: 32px;
+        --spacing-lg: 24px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        /* Smaller H1 */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
     .nav-links {
         display: none;
-        position: absolute;
+        position: fixed;
+        /* Fixed to cover screen or sit below header */
         top: 80px;
         left: 0;
         width: 100%;
         background-color: var(--color-white);
         flex-direction: column;
-        padding: var(--spacing-md);
-        box-shadow: var(--shadow-md);
+        padding: var(--spacing-lg);
+        box-shadow: var(--shadow-lg);
+        text-align: center;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav-links.active {
+        display: flex;
+        animation: slideDown 0.3s ease-out forwards;
+    }
+
+    .nav-links a {
+        padding: var(--spacing-sm) 0;
+        display: flex;
+        /* Changed from block to flex for alignment */
+        justify-content: center;
+        /* Center content */
+        align-items: center;
+        border-bottom: 1px solid var(--color-gray-light);
+        font-size: 1.1rem;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        position: relative;
+        /* For absolute centering of logo */
+    }
+
+    .desktop-logo {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-family: var(--font-accent);
+        /* Dancing Script */
+        font-size: 2rem;
+        color: var(--color-primary);
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        text-align: center;
+    }
+
+    .mobile-map-btn {
         display: flex;
     }
 
     .mobile-menu-btn {
         display: block;
+        font-size: 1.8rem;
+        z-index: 1001;
+        /* Ensure above logo if overlap */
+    }
+
+    .hero {
+        height: auto;
+        /* Allow content to dictate height */
+        min-height: 100vh;
+        /* Full viewport height for better impact */
+        margin-top: 0;
+        padding: 120px var(--spacing-sm) 60px;
+        /* Increased top padding and added bottom padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .hero-content h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
     }
 
-    .hero {
-        height: 400px;
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 var(--spacing-sm);
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-sm);
+        justify-content: center;
+        width: 100%;
+    }
+
+    .btn {
+        width: auto;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Removed redundant .btn block that was causing stacking */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        /* Stack footer columns */
+        text-align: center;
+        gap: var(--spacing-lg);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
